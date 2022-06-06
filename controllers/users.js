@@ -1,4 +1,4 @@
-const User = require('../../models/user');
+const User = require('../models/user');
 
 module.exports.renderRegister = (req, res) => {
     res.render('users/register');
@@ -25,7 +25,7 @@ module.exports.renderLogin = (req, res) => {
 }
 
 module.exports.login = (req, res) => {
-    req.flash('success', 'welcome back!');
+    req.flash('success', 'Welcome back!');
     const redirectUrl = req.session.returnTo || '/campgrounds';
     delete req.session.returnTo;
     res.redirect(redirectUrl);

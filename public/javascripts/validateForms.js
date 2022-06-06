@@ -3,12 +3,12 @@
 
     bsCustomFileInput.init()
 
-    const forms= document.querySelectorAll('.validated-form')
+    const forms = document.querySelectorAll('.validated-form')
 
     Array.from(forms)
         .forEach(function (form) {
             form.addEventListener('submit', function (event) {
-                if(!form.checkValidity()) {
+                if (!form.checkValidity()) {
                     event.preventDefault()
                     event.stopPropagation()
                 }
